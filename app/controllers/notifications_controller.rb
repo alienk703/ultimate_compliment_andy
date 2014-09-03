@@ -6,6 +6,8 @@ class NotificationsController < ApplicationController
 
   def create
     @notification = Notification.new(notification_params)
+    @notification.text
+
 
     # Do some stuff that checks whether the Notification has
     # the info you need, then sends it! Otherwise, display errors
@@ -16,7 +18,7 @@ class NotificationsController < ApplicationController
 
   private
   def notification_params
-    params.require(:notification).permit(:to_number)
+    params.permit(:to_number)
   end
 
 end

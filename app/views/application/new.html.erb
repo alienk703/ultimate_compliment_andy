@@ -1,0 +1,8 @@
+<h1>Welcome</h1>
+<%= form_tag({controller: 'notifications', action: 'create'}, method: 'post') do %>
+<%= text_field_tag(:to_number) %>
+<%= submit_tag %>
+<% end %>
+
+
+
